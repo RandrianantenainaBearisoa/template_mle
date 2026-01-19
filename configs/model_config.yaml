@@ -1,0 +1,14 @@
+# # Architecture du Modèle
+# model_type: "RandomForest" # ou "NeuralNet"
+
+# hyperparameters:
+#   n_estimators: 200
+#   max_depth: 10
+#   min_samples_split: 5
+#   learning_rate: 0.001
+
+# # Entraînement
+# training:
+#   epochs: 50
+#   batch_size: 32
+#   optimizer: "adam"

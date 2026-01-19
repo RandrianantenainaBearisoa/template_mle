@@ -1,0 +1,16 @@
+# # General configurations
+# project_name: "price-predictor-v2"
+# seed: 42
+
+# # Paths
+# data:
+#   raw_path: "data/raw/data.csv"
+#   external_path: "data/external/geo_data.csv"
+#   processed_dir: "data/processed/"
+
+# artifacts:
+#   model_output_path: "models/best_model.pt"
+#   log_dir: "logs/"
+
+# # Hardware
+# device: "cuda"  # ou "cpu"

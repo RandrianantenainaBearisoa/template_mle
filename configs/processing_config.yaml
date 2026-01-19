@@ -1,0 +1,11 @@
+# # Variables de Processing
+# features:
+#   numerical_cols: ["age", "surface", "rooms"]
+#   categorical_cols: ["city", "type"]
+#   target_col: "price"
+
+# # # Transformations
+# scaling: "StandardScaler" # ou "MinMaxScaler"
+# imputation_strategy: "median"
+# test_size: 0.2
+# validation_size: 0.1
