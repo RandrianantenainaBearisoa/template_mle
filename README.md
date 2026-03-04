@@ -17,3 +17,24 @@ template_mle/
 |      --- train.py         # Prepare a Model artifact ready for production
 |--- frontend/              # Minimal UI with vuejs for testing predictions
 ```
+## Requirements
+- **Python 3.12+**
+- **uv** : Package manager for Python. ([Install uv](https://docs.astral.sh/uv/getting-started/installation/))
+- **Node.js (^20.19.0 || >=22.12.0)** & **npm** : For the frontend Vue.js.
+
+## How to use it ?
+- Create a new repo based on this template
+- Clone the new repo and configure:
+```bash
+# Clone the new repo
+git clone <repo-url>
+cd <project-name>
+
+# Backend configuration
+cd backend
+uv sync --all-extras # create .venv and install all the dependencies
+
+# Frontend configuration
+cd ../frontend
+npm install
+```
