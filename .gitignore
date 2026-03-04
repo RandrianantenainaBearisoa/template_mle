@@ -3,6 +3,7 @@
 env/
 __pycache__/
 *.pyc
+uv.lock
 
 # Données (On laisse DVC gérer ça)
 data/raw/*

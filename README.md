@@ -32,9 +32,14 @@ cd <project-name>
 
 # Backend configuration
 cd backend
-uv sync --all-extras # create .venv and install all the dependencies
+uv sync # create .venv and install all the dependencies
 
 # Frontend configuration
 cd ../frontend
 npm install
 ```
+- Exploration data and coding the backend : navigate to the `/backend` folder in the terminal.
+    - EDA : ``uv run jupyter notebook`` to run the jupyter notebook server
+    - Coding in fastapi: ``uv run uvicorn api.main:app --reload``
+- Code the frontend part navigate to the `/frontend` folder in the terminal.
+    - ``npm run dev``
