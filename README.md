@@ -6,7 +6,7 @@ My goal with it is to have a reproducible architecture for my futur Machine lear
 Organized as follow : 
 ```
 template_mle/
-|--- backend/               # Contains the notebooks,the data and the api
+|--- backend/               # Contains the business logic
 |   --- api/                # FastAPI inference service
 |   --- data/               # Data for Data Analysis & experimentation and Pre-prod training
 |   --- exploration/        # Exploratory Data Analysis & experimentation notebooks
