@@ -4,19 +4,33 @@ This is my personal template for my Machine learning Engineering projects.
 My goal with it is to have a reproducible architecture for my futur Machine learning projects.
 ## Organization
 Organized as follow : 
+```txt
+├── backend 
+│   ├── config/                     # Environment & configuration files (YAML/JSON)
+│   ├── data/
+│   │   ├── data_lake/              # Raw immutable data
+│   │   ├── data_warehouse/         # Processed and structured data for EDA
+│   │   └── feature_store/          # Model-ready features
+│   ├── explorations/               # Notebooks & EDA scripts
+│   ├── model/                      # Serialized model artifacts (.joblib, .pkl)
+│   ├── pyproject.toml              # Project metadata & dependencies (uv)
+│   ├── src/
+│   │   ├── api/                    # FastAPI implementation
+│   │   │   └── main.py             # API entry point
+│   │   └── core/
+│   │       ├── pipeline/           # ML Lifecycle scripts
+│   │       │   ├── ingestion.py    # Connects to data sources, retrieves raw data, and persists it into the `data_lake`.
+│   │       │   ├── cleaning.py     # Handles data validation, missing values, and outliers, moving processed data to the `data_warehouse`.
+│   │       │   ├── feat_eng.py     # Transforms data into optimized features (scaling, encoding, selection) and stores them in the `feature_store`.
+│   │       │   └── training.py     # Orchestrates model training, hyperparameter tuning, and exports the final artifacts to the `model/` folder.
+│   │       └── utils/              # Shared helpers & utilities
+│   ├── tests/                      # Unit & Integration test suite
+│   └── uv.lock                     # Deterministic dependency lock file
+├── LICENSE
+├── README.md
+└── frontend                        # Minimal vuejs frontend for the test
 ```
-template_mle/
-|--- backend/               # Contains the business logic
-|   --- api/                # FastAPI inference service
-|   --- data/               # Data for Data Analysis & experimentation and Pre-prod training
-|   --- exploration/        # Exploratory Data Analysis & experimentation notebooks
-|   --- model               # Contains the model artefact
-|   --- src/                # Python Scripts
-|      --- ingestion.py     # Extract data from multiple sources in raw Parquet format for exploratory data analysis (EDA).
-|      --- processing.py    # Prepare the Final Parquet for the pre-prod training
-|      --- train.py         # Prepare a Model artifact ready for production
-|--- frontend/              # Minimal UI with vuejs for testing predictions
-```
+
 ## Requirements
 - **Python 3.12+**
 - **uv** : Package manager for Python. ([Install uv](https://docs.astral.sh/uv/getting-started/installation/))
